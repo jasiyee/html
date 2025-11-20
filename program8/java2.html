@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse Handling</title>
+</head>
+<body style="text-align: center;">
+
+<h2>Mouse Handling</h2>
+<img id="imgTag" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=1024x1024&w=0&k=20&c=z8_rWaI8x4zApNEEG9DnWlGXyDIXe-OmsAyQ5fGPVV8=" width="300" height="200"
+     onmouseover="changeImg()"
+     onmouseout="setOld()" />
+
+<p id="text">Old image displayed</p>
+<script>
+function changeImg() {
+  document.getElementById("imgTag").src = "https://st.depositphotos.com/1005145/2280/i/450/depositphotos_22808756-stock-photo-beautiful-sunset-in-the-spring.jpg"; 
+  document.getElementById("text").innerHTML = "New image displayed";
+}
+function setOld() {
+  document.getElementById("imgTag").src = "https://img.freepik.com/premium-photo/spring-landscape-sunset-spring-landscape-with-beautiful-sunset_1028938-157929.jpg"; 
+  document.getElementById("text").innerHTML = "Old image displayed";
+}
+</script>
+</body>
+</html>
