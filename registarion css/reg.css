@@ -1,0 +1,136 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body styling */
+body {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form container */
+form {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Title */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Text fields, selects, and textarea */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Input focus effect */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Radio and checkbox inputs */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Groups of checkboxes and radios */
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  font-weight: normal;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type="submit"] {
+  background: #6a11cb;
+  color: #fff;
+}
+
+input[type="reset"] {
+  background: #999;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background: #2575fc;
+}
+
+input[type="reset"]:hover {
+  background: #777;
+}
+
+/* Spacing for sections */
+br {
+  display: none;
+}
+
+/* Add spacing between form elements */
+form > * {
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  form {
+    padding: 25px;
+  }
+  input[type="submit"],
+  input[type="reset"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+

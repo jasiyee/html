@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calendar</title>
+<style>
+table, th, td {
+border:2px solid black;border-collapse:collapse;width:40px;height:40px;text-align:center;
+
+}
+
+</style>
+</head>
+<body>
+<h3>Calendar Generator</h3>
+Year: <input type="number" id="year" value="2025" >
+Month: <input type="number" id="month">
+<button onclick="makeCalendar()">Show</button>
+<br><br>
+<div id="calendar"></div>
+<script>
+function makeCalendar() {
+let year=Number(document.getElementById("year").value);
+let month=Number(document.getElementById("month").value);
+let daysInMonth=new Date(year,month,0).getDate();
+let firstDay=new Date(year,month-1,1).getDay();
+let table="<table><tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr><tr>";
+for(i=0;i<firstDay;i++)table+="<td></td>";
+for(day=1;day<=daysInMonth;day++){
+table+="<td>"+day+"</td>";
+if((firstDay+day)%7===0)table+="</tr><tr>";
+}
+table+="</tr></table>";
+document.getElementById("calendar").innerHTML=table;
+}
+</script>
+</body>
+</html>
